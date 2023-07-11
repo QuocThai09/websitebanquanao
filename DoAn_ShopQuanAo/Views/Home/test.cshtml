@@ -1,0 +1,276 @@
+﻿
+@{
+    ViewBag.Title = "test";
+}
+
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="~/Styles/Styles.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="container">
+            <div class="header" style="position: fixed; z-index: 100000; left: 0px; right: 0px; height: 75px;">
+                <a class="navbar-brand" href="@Url.Action("test","Home")"><img src="~/Image/logo.png" class="rounded" style="width:60px;height:40px;position:absolute;top:20px;left:80px" /></a>
+                <div class="nav" style="left:350px;top:25px;position:absolute;font-size:20px;">
+                    <a href="#" style="text-decoration: none; color: white"> GU TỐI GIẢN </a>
+                    <div class="dropdown" style="left:30px">
+                        <a href="#" style="text-decoration: none; color: white">
+                            GU ĐƠN GIẢN <i class="fa fa-angle-down" style="font-size:15px"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            @Html.Action("TheLoaiPartial", "TheLoai")
+                        </div>
+                    </div>
+                    <div class="dropdown" style="left:60px">
+                        <a href="#" style="text-decoration: none; color: white">
+                            GU THIẾT KẾ <i class="fa fa-angle-down" style="font-size:15px"></i>
+                        </a>
+                        <div class="dropdown-content" style="font-size:15px">
+                            <hr style="height:3px;color:red" />
+                            <li><a class="dropdown-item" href="#">GU 12 Vị Anh Hùng Dân Tộc</a></li>
+                            <li><a class="dropdown-item" href="#">GU Thần Cổ Đại</a></li>
+                            <li><a class="dropdown-item" href="#">GU Ngân Hà</a></li>
+                        </div>
+                    </div>
+                    <div class="col" style="position:absolute;right:-400px">
+                        <a href="@Url.Action("GioHang", "GioHang")" style="text-decoration: none; color: white;"> <i class='fas fa-cart-plus' style='font-size:24px'></i></i> </a>
+                    </div>
+                    <div class="col" style="position:absolute;right:-450px">
+                        <a href="@Url.Action("DangNhap", "DangNhap")" style="text-decoration: none; color: white;"> <i class='fas fa-user-alt' style='font-size:20px'></i> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="position:absolute;left:0px;right:0px;top:72px;">
+                <a class="navbar-brand" href="#"><img src="~/Image/saleAoSoMi.jpg" class="rounded" /></a>
+            </div>
+            <div class="row justify-content-start" style="position:absolute;top:900px;text-align:center;left:300px;font-family:'Times New Roman', Times, serif">
+                <h1 style="font-size: 20px;font-weight:bold">Top sản phẩm HOT</h1><br />
+                <tt style="font-size: 20px;">Những sản phẩm thời trang mới nhất/Hot nhất</tt>
+            </div>
+            <div class="AoThun" style="position: relative; top: 1010px; text-align: center; left: 40px">
+                @Html.Action("HangHoaAoThun", "HangHoa")
+            </div>
+            <div class="row-align-items-start">
+                <div style="position: absolute; left: 0px; right: 0px; top: 2010px; text-align: center;">
+                    <a class="navbar-brand" href="#"><img src="~/Image/saleAoKhoat.jpg" class="rounded" /></a>
+                </div>
+            </div>
+            <div class="row" style="position:absolute;top:2610px;text-align:center;left:40px">
+                @Html.Action("HangHoaAoKhoat", "HangHoa")
+            </div>
+            <div class="row-align-items-start">
+                <div style="position: absolute; left: 0px; right: 0px; top: 3350px; text-align: center;">
+                    <a class="navbar-brand" href="#"><img width="700" height="500" src="~/Image/sale90k.jpg" class="rounded" /></a>
+                </div>
+            </div>
+            <div class="row" style="position:absolute;top:3910px;text-align:center;left:40px">
+                @Html.Action("HangHoaAoSoMi", "HangHoa")
+            </div>
+            <div class="row" style="position:absolute;top:4650px;text-align:center;left:40px">
+                @Html.Action("HangHoaQuanDai", "HangHoa")
+            </div>
+            
+            <div class="row" style="position: absolute; top: 5550px; text-align: center; left: 200px; font-family:'Times New Roman', Times, serif">
+                <h1 style="font-size: 30px;">Các chương trình khuyến mãi</h1><br />
+                <h1 style="font-size: 20px;">Đừng bỏ lỡ các chương trình khuyến mãi Hot tại Yame.vn</h1>
+            </div>
+            <div class="row-align-items-start" style="position:absolute;top:5630px;">
+                <div class="col">
+                    <div >
+                        <a class="navbar-brand" href="#"><img width="550" height="400" src="~/Image/sale90k.jpg" class="rounded" /></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="position:relative;left:560px;top:-400px">
+                        <a class="navbar-brand" href="#"><img width="550" height="400" src="~/Image/sale701.jpg" class="rounded " /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="header" style="position:absolute;top: 6050px; left:0px; right:0px;height:500px">
+                    <a class="navbar-brand" href="#"><img width="100" height="70" src="~/Image/logo.png" class="rounded" style="margin-left:auto; margin-right:auto;display:block;position:relative; top:20px" /></a>
+                    <h2 style="color:white; font-size:15px;font-family:'Times New Roman', Times, serif;text-align:center;position:relative;top:30px">Đặt hàng và thu tiền tận nơi toàn quốc</h2>
+                    <h2 style="color:white; font-size:20px;font-family:'Times New Roman', Times, serif;text-align:center;position:relative;top:30px">(028) 7307 1441</h2>
+                    <div class="row-align-items-start">
+                        <div class="col">
+                            <h2 style="color:white; font-size:20px;font-family:'Times New Roman', Times, serif;position:relative;top:30px;left:100px;">
+                                TP.HCM
+                                <ul style="font-size: 15px; list-style-type: none;position:relative;top:5px;left:-20px">
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            Yame Q.10: 77OF, Sư Vạn Hạnh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Q.10 : 286 đường 3 tháng 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe & Kenshin Tea Tân Phú2 : 189 Hòa Bình
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Thủ Đức : 336 Võ Văn Ngân
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Q.9 : 200 Lê Văn Việt
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Q.7 : 323 Huỳnh Tấn Phát
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Q.5 : 190 Nguyễn Trãi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Gò Vấp 2 : 1096 Quang Trung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Hóc Môn : 39 Quang Trung
+                                        </a>
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="col-lg-5">
+                            <h2 style="color:white; font-size:20px;font-family:'Times New Roman', Times, serif;position:absolute;top:158px;left:500px">
+                                KHU VỰC TÂY NAM BỘ
+                                <ul style="font-size: 15px; list-style-type: none;position:relative;top:5px;left:-20px">
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Rạch Giá : 290 Nguyễn Trung Trực
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Vĩnh Long : 27A Phạm Thái Bường
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Cần Thơ 1: 381B Nguyễn Văn Cừ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Cần Thơ 2 : 45 đường 3 tháng 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Tân An : 492 Hùng Vương
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Long Xuyên : 47 Tôn Đức Thắng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Sa Đéc : 289 Nguyễn Sinh Sắc
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Cao Lãnh : 66A Tôn Đức Thắng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            Cà Mau : 111 Trần Hưng Đạo
+                                        </a>
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="col-lg-10">
+                            <h2 style="color:white; font-size:20px;font-family:'Times New Roman', Times, serif;position:absolute;top:158px;left:900px">
+                                KHU VỰC ĐÔNG NAM BỘ
+                                <ul style="font-size: 15px; list-style-type: none;position:relative;top:5px;left:-20px">
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Biên Hòa : 30 Dương Tử Giang
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Vũng Tàu: 528 Trương Công Định
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Tây Ninh : 586 Cách Mạng Tháng 8
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Tp. Dĩ An : 82A Nguyễn An Ninh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Tp. Thuận An : 132 Ngô Quyền
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-home"></i>
+                                        <a>
+                                            YaMe Tp. Thủ Dầu Một : 187 Yersin
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+    </body>
+</html>
+

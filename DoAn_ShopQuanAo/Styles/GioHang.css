@@ -1,0 +1,33 @@
+﻿body {
+    
+}
+.giohang {
+    margin: auto;
+}
+.btn_dathang {
+    margin-top: 20px;
+    background-color: #0066FF;
+    width: 500px;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid white;
+}
+    .btn_dathang:hover {
+        background-color: #0066CC;
+    }
+
+.btn_muatiep {
+    margin-top: 20px;
+    background-color: #FFCC66;
+    width: 500px;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid white;
+    margin-bottom:50px;
+}
+
+    .btn_muatiep:hover {
+        background-color: #FFCC00;
+    }
+
+

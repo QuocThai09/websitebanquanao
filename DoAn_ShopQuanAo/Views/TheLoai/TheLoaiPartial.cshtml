@@ -1,0 +1,18 @@
+﻿@using DoAn_ShopQuanAo.Models;
+@{
+    ViewBag.Title = "TheLoaiPartial";
+}
+
+@model List<TheLoai>
+<ul class="list-group list-group-flush text-left" style="list-style: none;">
+    <hr style="height:3px;color:red"/>
+    @{foreach (var item in Model)
+        {
+            <li class="col-lg-10">
+                    <a href="@Url.Action("QuanAoTheoTheLoai",new{@maTL = item.MaTL})" style="text-transform:uppercase;text-decoration:none;font-size:15px;width:200px; ">@item.TenTL</a>
+            </li>
+            
+        }
+       
+    }
+</ul>

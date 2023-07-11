@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_ShopQuanAo" Class="ShopQuanAoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-KE3QV8B;Initial Catalog=QL_ShopQuanAo;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_ShopQuanAoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HangHoa" Member="HangHoas">
+    <Type Name="HangHoa">
+      <Column Name="MaHH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Anh" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Mau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChatLieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MaTL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TheLoai_HangHoa" Member="TheLoai" ThisKey="MaTL" OtherKey="MaTL" Type="TheLoai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TheLoai" Member="TheLoais">
+    <Type Name="TheLoai">
+      <Column Name="MaTL" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TheLoai_HangHoa" Member="HangHoas" ThisKey="MaTL" OtherKey="MaTL" Type="HangHoa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="Userr" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

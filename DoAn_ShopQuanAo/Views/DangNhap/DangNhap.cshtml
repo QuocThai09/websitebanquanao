@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="~/Styles/StylesDangNhap.css" rel="stylesheet" />
+    <title>Form login</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form action="" id="form-login">
+            <h1 class="form-heading">Đăng Nhập</h1>
+            <div class="form-group">
+                <i class="far fa-user"></i>
+                <input type="text" class="form-input" name="user" id="user" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <i class="fas fa-key"></i>
+                <a ><input type="password" class="form-input" name="password" placeholder="Mật khẩu"></a>
+                <div id="eye">
+                    <i class="far fa-eye" style="position:relative;right:-100px"></i>
+                </div>
+            </div>
+            <a href="@Url.Action("test","Home")"><input type="submit" value="Đăng nhập" class="form-submit"></a>
+            <h1 class="form-footer">Bạn chưa có tài khoản? <a href="@Url.Action("DangKy","DangKy")">Đăng ký ngay</a></h1>
+        </form>
+    </div>
+    
+</body>
+
+</html>
+
+

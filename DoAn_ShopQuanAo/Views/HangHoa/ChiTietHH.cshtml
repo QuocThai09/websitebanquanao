@@ -1,0 +1,140 @@
+﻿@using DoAn_ShopQuanAo.Models;
+@{
+    ViewBag.Title = "ChiTietHH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card border-dark">
+    <table class="border-dark mx-3 mb-3 mt-3">
+        <div>
+            <a href="@Url.Action("test","Home")" style="color: black; text-decoration: none">
+                <
+                <a />
+                <a>/  @Model.TenHH</a>
+        </div>
+        <tr class="text-left">
+            <td rowspan="30" width="30%">
+                <img class="card-header" src="@Url.Content("~/Image/"+ Model.Anh)" width="100%" height="100%" alt="Image" />
+            </td>
+            <td width="5%">
+            </td>
+            <td width="50%" style="position:absolute;top:auto;font-size:25px">
+                @Model.TenHH
+            </td>
+            <td width="15%" style="font-size:25px">
+                Mô tả Sản Phẩm
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-40px">
+                Chất liệu: @Model.ChatLieu
+            </td>
+            <td width="15%" style="position:relative;top:auto;text-align:left;">
+                @Model.MoTa
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="font-weight:initial;color:red; position:relative;top:-50px;font-size:20px;font-weight:bold">
+                @string.Format("{0:0.000}", @Model.DonGia) đ
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-15px">
+                <hr style="width:70%" />
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-30px">
+                @Model.Mau,S
+                <a style="position:absolute;left:200px">
+                    @Model.SoLuong CH còn
+                </a>
+
+            </td>
+
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-40px">
+                <hr style="width:70%" />
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-55px">
+                @Model.Mau,M
+                <a style="position:absolute;left:200px">
+                    @Model.SoLuong CH còn
+                </a>
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-65px">
+                <hr style="width:70%" />
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-80px">
+                @Model.Mau,L
+                <a style="position:absolute;left:200px">
+                    @Model.SoLuong CH còn
+                </a>
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-90px">
+                <hr style="width:70%" />
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-105px">
+                @Model.Mau,XL
+                <a style="position:absolute;left:200px">
+                    @Model.SoLuong CH còn
+                </a>
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td width="5%">
+            </td>
+            <td style="position:relative;top:-115px">
+                <hr style="width:70%" />
+            </td>
+        </tr>
+        <tr class="text-left">
+            <td>
+
+            </td>
+            <td style="position:relative;left:50px;top:-100px">
+                <a href="@Url.Action("ThemGioHang", "GioHang", new {@MaHH = Model.MaHH, @strURL = Request.Url.ToString() })"><input type="submit" value="MUA NGAY" class="btn btn-primary" /></a>
+                <a href=" @Url.Action("test", "Home") " style="position:relative;left:90px"><input class="btn btn-primary" type="submit" value="Mua Tiếp"></a>
+            </td>
+            <td>
+               
+                
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+
+
